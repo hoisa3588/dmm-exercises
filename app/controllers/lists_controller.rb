@@ -3,6 +3,10 @@ class ListsController < ApplicationController
     # Viewへ渡すためのインスタンス変数に空のModelオブジェクトを生成する。
     @List = List.new  
   end
+   
+  def index
+    @lists = List.all  
+  end
 
 def create
     # １.&2. データを受け取り新規登録するためのインスタンス作成
